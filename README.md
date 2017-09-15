@@ -4,25 +4,24 @@
 
 ```
 owner:
-    hid: 000
-    name: Gregor von Laszewski
-    url: https://github.com/bigdata-i523/sample-hid000
+    hid: 204
+    name: Chaturvedi, Dhawal
+    url: https://github.com/bigdata-i523/hid204
 ```
 
 # Paper 1
 
 ```
-paper1:
+paper1: 
    author: 
-   - Gregor von Laszewski
-   - Fugang Wang
+   - Chaturvedi, Dhawal
    hid:
-   - 000
-   - 001
-   title: This is my paper about xyz
-   abstract: This paper showcases tis and that and the other
-   url: https://github.com/bigdata-i523/sample-hid000/paper1/paper1.pdf
+   - 204
+   title: Big Data Anaytics and High Performance Computing
+   abstract: This paper showcases the use applications of Big Data and High Performance Computing
+   url: https://github.com/bigdata-i523/hid204/paper1/paper1.pdf
    type: latex
+   status: in progress
 ```
    
 # Paper 2
@@ -30,13 +29,14 @@ paper1:
 ```
 paper2:
    author: 
-   - Gregor von Laszewski
+   - Chaturvedi, Dhawal
    hid:
-   - 000
-   title: This is my paper about the other abc
+   - 204
+   title: Big Data Analytics and Distributed Computing
    abstract: This paper showcases tis and that and the other in regards to abc
-   url: https://github.com/bigdata-i523/sample-hid000/paper2/paper2.pdf   
-   type: word
+   url: https://github.com/bigdata-i523/hid204/paper2/paper2.pdf   
+   type: latex
+   status: Not started yet
 ```
 
 # Project 
@@ -56,5 +56,6 @@ paper2:
    abstract: This paper showcases tis and that and the other 
    url: https://github.com/bigdata-i523/sample-pid000/project/report.pdf
    type: latex
+   status: Not started yet
 ```
    
