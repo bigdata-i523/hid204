@@ -18,7 +18,7 @@ paper1:
    hid:
    - 204
    title: Big Data Anaytics and High Performance Computing
-   abstract: This paper showcases the use applications of Big Data and High Performance Computing
+   abstract: This paper showcases the use of Big Data and High Performance Computing
    url: https://github.com/bigdata-i523/hid204/paper1/paper1.pdf
    type: latex
    status: in progress
