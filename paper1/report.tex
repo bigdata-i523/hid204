@@ -28,7 +28,7 @@
 
 
 \begin{abstract}
-This paper provides an introduction to Big Data and High Performance Computing and tries to find how they are related to each other.
+This paper provides an introduction to Big Data and High Performance Computing and tries to find how they are related to each other. We describe what exactly is Big Data and High Performance Computing. We then describe how they are related to each other and what new technologies are in use in this field.
 \end{abstract}
 
 \keywords{ACM proceedings, \LaTeX, text tagging}
@@ -37,7 +37,31 @@ This paper provides an introduction to Big Data and High Performance Computing a
 \maketitle
 
 \section{Introduction}
-Big data is a term for data sets that are so large or complex that traditional data processing application software is inadequate to deal with them. Big data challenges include capturing data, data storage, data analysis, search, sharing, transfer, visualization, querying, updating and information privacy.
+Data is growing faster than ever, and at the same time, it is becoming obsolete faster than ever. The challenge is to how quickly and effectively one can analyze the data and gain insights that can be useful to solve problems. High Performance Computing plays an important role in running predictive analytics, especially when time is of crucial importance.
+
+\subsection{Big Data}
+The quantity of computer data generated is growing exponentially in this world for many reasons. Retailers are building vast databases of recorded customer activities. Organizations working in logistics, financial services and health-care are also capturing more data. Social media is creating vast quantities of digital material. Big data is a term used for a combination of structured and unstructured data which has a potential to be mined for information. It is often characterized by 3Vs : the enormous \textbf{Volume} of data, the \textbf{Variety} of data and the \textbf{Velocity} at which data is processed. \\
+Here, Volume poses poses both the greatest challenge and the greatest opportunity as big data could help understand many organizations to understand people better and allocate resources more effectively. Big Data velocity also raises are number of issues as the rate at which data is flowing into many organizations is exceeding the capacity of their IT systems. In addition, user increasingly demand data to be streamed to them in real-time and delivering this can prove quite a challenge. Finally, the variety of data-types to be processed are becoming increasingly diverse. Today not only text documents, but audio, video , photographs are all equally important source of data.
+\\
+Recently Big data has been connected with terms such as data analytics, predictive analytics or any other kind of analytics which helps an organization to predict the user behavior so that they can improve their business. Data sets have been growing so rapidly mainly due to increasing number of ways data can be collected such as smartphones, your internet history or your search history on any website.
+
+\subsection{High Performance Computing}
+High-performance computing (HPC) is a term used for computers having a capacity of doing more than  a teraflop operations per second. It involves a lot of distinct computer processors working together on a complex problem. The complex problem is divided into smaller parts and distributed among the processors which are inter-connected using an architecture which is either massive centralized parallelism, massive distributed parallelism or something else entirely. 
+
+
+Massive Centralized Parallel computing refers to a computer architecture in which several high processing nodes are connected via a fast local area network. All these pseudo independent nodes are coordinated by a central scheduler. All the processors are connected to a single piece of memory. It is essentially a bigger version of a multi-core processor. It used to be the most common type of HPC architecture 15 years ago, but we don't see much of them anymore. This type of architecture is quite expensive and doesn't really scale. 
+
+Massive Distributed Parallel computing refers to a computer architecture in which several high processing nodes are inter-connected but with a more diverse administrative domain. It is a more opportunity based architecture in which the resources are allocated on the basis of their availability instead of having a centralized scheduler. The way these different nodes communicate with each other is standardized through a library called Message Passing Interface(MPI).
+
+Almost every Super Computer these days is a hybrid of Distributed and Shared memory in some way. Each node will be a shared-memory system. The network connecting these nodes will be some sort of topology. Along with the architecture, the way code is written needs to get optimized as well. Parallel computing is the key to increase the performance of Super Computing. Ideally, if you have T processors, you would like your program to be T times faster. But thats not the case. This is because not all parts of a program can be successfully split into T parts which can be processed in parallel. Splitting up the program might even cause additional overheads such as communication. 
+
+
+HPC is typically used for scientific research or simulation and analysis of an environment through computer modelling.HPC brings together several computer technologies such as Computer Architecture, algorithms together to solve these high process demanding problems. 
+
+
+
+
+
 
 \section{The Body of The Paper}
 
