@@ -17,11 +17,11 @@ paper1:
    - Chaturvedi, Dhawal
    hid:
    - 204
-   title: Big Data Anaytics and High Performance Computing
-   abstract:This paper provides an introduction to Big Data and High Performance Computing and tries to find how they are related to       each other. 
-   url: https://github.com/bigdata-i523/hid204/paper1/paper1.pdf
+   title: Big Data Analytics and High Performance Computing
+   abstract: This paper provides an introduction to Big Data and High Performance Computing.
+   url: https://github.com/bigdata-i523/hid204/paper1/report.pdf
    type: latex
-   status: in progress
+   status: 100%
    chapter: Technology
 ```
    
