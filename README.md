@@ -33,11 +33,11 @@ paper2:
    - Chaturvedi, Dhawal
    hid:
    - 204
-   title: Big Data Analytics and Distributed Computing
+   title: Support Vector Machines and Big Data
    abstract: This paper showcases tis and that and the other in regards to abc
    url: https://github.com/bigdata-i523/hid204/paper2/paper2.pdf   
    type: latex
-   status: Not started yet
+   status: in progress
 ```
 
 # Project 
