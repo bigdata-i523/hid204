@@ -4,7 +4,8 @@ owner:
     name: Chaturvedi, Dhawal
     url: https://github.com/bigdata-i523/hid204
 paper1:
-    abstract: This paper provides an introduction to Big Data and High Performance
+    abstract: >
+        This paper provides an introduction to Big Data and High Performance
         Computing.
     author:
         - Chaturvedi, Dhawal
