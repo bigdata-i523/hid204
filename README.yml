@@ -1,0 +1,27 @@
+---
+owner:
+    hid: 204
+    name: Chaturvedi, Dhawal
+    url: https://github.com/bigdata-i523/hid204
+paper1:
+    abstract: This paper provides an introduction to Big Data and High Performance
+        Computing.
+    author:
+        - Chaturvedi, Dhawal
+    chapter: Technology
+    hid:
+        - 204
+    status: 100%
+    title: Big Data Analytics and High Performance Computing
+    type: latex
+    url: https://github.com/bigdata-i523/hid204/paper1/report.pdf
+paper2:
+    abstract: This paper showcases tis and that and the other
+    author:
+        - Gregor von Laszewski
+    hid:
+        - 0
+    status: Not started yet
+    title: Benchmarking a BigData Docker deployment
+    type: latex
+    url: https://github.com/bigdata-i523/sample-pid000/project/report.pdf
