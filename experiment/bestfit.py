@@ -11,3 +11,6 @@ ax.plot(x, fit[0] * x + fit[1], color='blue') # plot the line with respect to th
 ax.scatter(x, y) # scatter plot the values in the array x and y
 
 figure.show() # output the resulting figure
+
+#The program tries to find the best fit line that can represent the points(x,y) which are stored in numpy arrays x and y respectively.
+#If we increase the degree , we will get a polynomial which can fit the given points in an even better way.
