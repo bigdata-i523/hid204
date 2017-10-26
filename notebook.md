@@ -10,7 +10,9 @@
 * 10/07/17 Submitted Paper 1
 * 10/17/17 Corrected errors in Paper 1 
 * 10/23/17 Submitted Paper 1
+* 10/23/17 Implemented image frequency analyzer in python
 * 10/25/17 Started working on Paper 2
+
 
 
 # Theory
