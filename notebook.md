@@ -12,6 +12,8 @@
 * 10/23/17 Submitted Paper 1
 * 10/23/17 Implemented image frequency analyzer in python
 * 10/25/17 Started working on Paper 2
+* 10/28/17 Added more resources for Paper 2.
+
 
 
 
@@ -51,4 +53,6 @@
 * 09/29/2017 Meeting: Attended class meeting for residential students
 * 10/13/2017 Meeting: Couldn't attend class meeting for residential students due to fever
 * 10/20/2017 Meeting: Attended class meeting for residential students
+* 10/27/2017 Meeting: Attended class meeting for residential students
+* 11/03/2017 Meeting: Attended class meeting for residential students
 
