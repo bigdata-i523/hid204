@@ -20,6 +20,7 @@ paper2:
     abstract: This paper provides and introductions to Support Vector Machines and Big Data
     author:
         - Chaturvedi, Dhawal
+    chapter: Machine Learning
     hid:
         - 204
     status: Nov 18 17 100%
