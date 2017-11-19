@@ -1,0 +1,100 @@
+\documentclass[sigconf]{acmart}
+
+\input{format/i523}
+
+\begin{document}
+\title{Big Data and Support Vector Machines}
+
+
+\author{Dhawal Chaturvedi}
+\orcid{1234-5678-9012}
+\affiliation{%
+  \institution{Indiana University}
+  \streetaddress{2679 E. 7th St, Apt. C}
+  \city{Bloomington} 
+  \state{Indiana} 
+  \postcode{47408}
+}
+\email{dhchat@iu.edu}
+
+
+
+% The default list of authors is too long for headers}
+\renewcommand{\shortauthors}{D.Chaturvedi}
+
+
+\begin{abstract}
+This paper provides an introduction to Support Vector Machines(SVM) and Big Data and tries to demonstrate how SVM can be used for classification of Big Data.
+\end{abstract}
+
+\keywords{Big Data, Support Vector Machines, hid204, i523}
+
+
+\maketitle
+
+
+\section{Introduction}
+We live in a world increasingly driven by data. As the world is growing, the amount of data that is being created and stored on a global level is almost inconceivable, and it just keeps growing. As the amount of data increases, insights about it are relatively rare. It is getting increasingly difficult to get meaningful insights from these large datasets. Because this huge amount of data is unstructured aswell, it cannot be stored or processed in a traditional RDBMS or any other traditional Database Management System. Support Vector Machines(SVM) are supervised learning models that can be used to classify data according to their labels. We are discussing SVM because they are conceptually easier to understand when compared to other supervised learning algorithms. They can be applied to the same class of problems as other supervised learning algorithms along with neural networks. The only downside of using SVM is its complexity. Its gets even harder to implement an SVM for a huge dataset but if the training of an SVM can be broken down into smaller parts, then one can overcome this problem. 
+\\
+The paper is organised as follows. It gives an introduction to Support Vector Machines and talks about different types of SVM and ways to implement them. Then we describe different techniques such as hadoop framework through which we can implement SVM on Big data and gather meaningful information out of it.
+
+
+\section{Support Vector Machines}
+
+Support Vector Machine (SVM) was introduced by Vladimir N. Vapnik in 1995. It is one of the most popular learning algorithm which uses supervised learning for linear classification problems. They are based on the concept of decision boundaries which separates a set of objects having different features. Following are different types of SVMs. Along with linear classification, SVM is also capable of performing non-linear classification of dataset using the Kernel trick. 
+\subsection{C-SVM classification}
+This kind of SVM is for binary classification usage. It is controlled with the parameter C which basically tells SVM optimization how much you want to avoid misclassifying each training example. The range of C can go from zero to infinity. For large values of C, the optimization will choose a smaller-margin hyperplane if that hyperplane does a better job of getting all the training points classified correctly. Conversely, a very small value of C will cause the optimizer to look for a larger-margin separating hyperplane, even if that hyperplane misclassifies more points. In layman terms, C decides the width of your decision plane.
+
+\subsection{nu-SVM classification}
+This kind of SVM is also for binary classification usage. It is controlled with the parameter nu whose value can range from 0 to 1. This type of classification was introduced due to problems with C-SVM such as C can take any positive value and that it does not have any direct interpretation. In response Scholkopf et al. reformulated SVM to take a new regularization parameter nu which is bounded between 0 and 1 and has a direct interpretation that it is related to the ratio of support vectors and the ratio of the training error.
+
+  
+\subsection{epsilon-SVR regression}
+In epsilon-SVR we do not have any control on how many data vectors from the dataset become support vectors, it could be a few, it could be many. But we will have total control of how much error to be allowed in our model to have, and anything beyond the specified epsilon will be penalized in proportion to C, which is the regularization parameter.
+
+\subsection{nu-SVM regression}
+In nu-SVR, the parameter nu is used to determine the proportion of the number of support vectors we desire to keep in our solution with respect to the total number of samples in the dataset. In nu-SVR the parameter epsilon is introduced into the optimization problem formulation and it is estimated automatically (optimally) for us.
+
+\subsection{Kernel trick for SVM}
+SVM can also be used for non-linear classification using the kernel trick. Kernels are functions which takes low dimensional input space and transform it to a higher dimensional space. In layman terms, what it does is, it converts data which is not linearly separable in lower dimension to a higher dimension in which it can be separated linearly. 
+\section{Parallel SVM for Big Data}
+To fasten the process of training SVM, parallel methods have been proposed by splitting the traing data into smaller subsets and training a network to assign samples of different subsets.
+\subsection{Need for Parallel SVM}
+The biggest problem with SVM is its algorithmic complexity and high memory requirements, especially with large datasets. We can overcome this issue through parallel implementation of the algorithm so that it can work more efficiently.
+\subsection{Architecture}
+Parallel SVM can be implemented on large datasets by breaking the dataset into smaller fragments and use a number of SVMs to process each individual data set and finding local support vectors. By doing this the overall training time can be reduced significantly as the processing time is divided between individual nodes \cite{Psvm}.
+\\
+The training is done on Partial Support Vector Machines(PSVMs). Every PSVM gives an incomplete solution which is local to that PSVM. This partial solution is further used to find the final complete solution\cite{Psvm}. Through this model, large data optimization work can be distributed into several individual small optimizations. The resultant support vectors of the previous node is given as an input to the next node. The output set of support vectors of two Support Vector Machines are merged into single set and used as an input for the next Support Vector Machine. This process is continued untill only 1 set of Support Vector Machine is left.
+
+
+\section{MapReduce Based Parallel SVM}
+Map Reduce methodology can also be used to implement Parallel Support Vector Machines. The entire dataset is divided into n equal parts. The sub datasets is used as an input to the computational unit. MapReduceDriver starts the MapReduce job on each node. Map job is performed on each node on their respective datsets. The output of the mapper task, which is a trained support vector, is sent to the reducer to perform reduce operation. In the reduce task, the global weight vector is being computed by taking all local support vector computed at individual mapper nodes as an input. The training procedure will iterate until all sub-SVM are merged into one SVM \cite{Psvm}.
+
+\section{Quantum Support Vector Machine}
+Not just high memory but the algorithmic complexity makes it impossible for SVM to be implemented on a large dataset. Patrick Rebentrost et al proposed that a quantum support vector machine can be implemented with algorithmic complexity of O(log NM) in both training and classification stages. It can be done due to a fast quantum evaluation of inner products and re-expressing the SVM as an approximate least-squares problem that allows for a quantum solution with the matrix inversion algorithm \cite{Quantum}. A technique for the exponentiation of non-sparse matrices which is recently developed allows us to reveal efficiently in quantum form the largest eigenvalues and corresponding eigenvectors of the training data overlap (kernel) and covariance matrices \cite{Quantum}. We can therefore, efficiently perform a low-rank approximation of these matrices, which is also known as Principal Component Analysis(PCA). In cases when a low-rank approximation is appropriate, this quantum SVM operates on the full training set in logarithmic runtime which is enormous improvement from O($n^2$) \cite{Quantum}.
+
+\section{Particle Swarm Optimization Algorithm}
+The particle swarm algorithm (Particle Swarm Optimization, PSO algorithm), is based on an idea of possibility to solve the optimization problems using modeling of animal groups' behavior. ``PSO algorithm consists of the repeated applications of the fixed type of the kernel functions to choose optimal values of the kernel function parameters and value of the regularization parameter with the subsequent choice of the best type of the kernel function and values of the kernel function parameters and value of the regularization parameter corresponding to this kernel function type'' \cite{PSO}. The PSO algorithm and other swarm optimization algorithms are quite suited for the distributed architecture and handling of high volume unstructured data in the Big Data analytics because of the similarity between the behavior of swarms and big data, both being unpredictable. 
+\\
+Liliya Demidova et al. proposed a modified version of PSO algorithm which can be implemented for big datasets. The modified PSO algorithm conducts a simultaneous search of the type of kernel functions, the parameters of the kernel function and the value of the regularization parameter for the SVM classifier. ``The idea of particles regeneration served as the basis for the modified PSO algorithm'' \cite{PSO}. In the implementation of this algorithm, some particles change the type of their kernel function to the one which corresponds to the particle with the best value of the
+classification accuracy. The PSO algorithm which is proposed reduces the time consumed by the developed SVM classifiers, which is an important factor for Big Data classification problem. In majority of the cases, these classifiers provide a high quality of data classification. In few exceptional cases the SVM ensembles based on the decorrelation maximization algorithm for the different strategies of the decision-making on the data classification and the majority vote rule can be used \cite{PSO}. Along with this, a two-level SVM classifier has been proposed which works as the group of the SVM classifiers at the first level and as the SVM classifier on the base of the modified PSO algorithm at the second level. The promising results support the efficiency of these two approaches for classification of Big datasets \cite{PSO}.
+
+\section{Conclusion}
+Unlike the popular belief, Support Vector Machines can be used for Big Data analysis . People usually believe that they cannot be used for big data classification because of their highly complex nature. But as we have seen from the above examples, a lot of work has been done in this field to make SVMs more compatible with big data. The approach in most cases is trying to replicate the HDFS architecture by replacing each node with a partial SVM. 
+
+\begin{acks}
+
+The authors would like to thank Dr. Gregor von Laszewski for his support and suggestions to write this paper.
+\\
+The author would also like to thank Mr. Aditya Tandon for proof reading his paper and giving suggestions to improve it.
+
+\end{acks}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{report} 
+
+\appendix
+
+% \input{issues}
+
+\end{document}
