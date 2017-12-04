@@ -26,17 +26,17 @@ paper2:
     status: Nov 18 17 100%
     title: Big Data and Support Vector Machines
     type: latex
-    url: https://github.com/bigdata-i523/hid204/paper2/report.pdf     
+    url: https://github.com/bigdata-i523/hid204/paper2/report.pdf
 project:
    type: project
    author: 
-   - Chaturvedi, Dhawal
+   - Wang, Jiaan and Chaturvedi, Dhawal
    hid:
-   - 000
-   title: Benchmarking a BigData Docker deployment
+   - 233 and 204
+   title: Big Data in Safe Driver Prediction
    abstract: >
        We showcase tis and that and the other
        and another line.
-   url: https://github.com/bigdata-i523/sample-pid000/project/report.pdf 
-   type: latex
+   url: url: https://github.com/bigdata-i523/hid233/blob/master/project/report.tex
+   type: project
    status: in progress
