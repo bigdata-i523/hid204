@@ -31,7 +31,7 @@ project:
    type: project
    author: 
    - Chaturvedi, Dhawal
-   pid:
+   hid:
    - 000
    title: Benchmarking a BigData Docker deployment
    abstract: >
