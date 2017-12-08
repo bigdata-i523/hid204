@@ -28,6 +28,7 @@ paper2:
     type: latex
     url: https://github.com/bigdata-i523/hid204/paper2/
 project:
+    duplicate: True
     abstract: >
         For years, people have been trying to reduce their automobile
         insurance bills. Insurance companies claim that price will be
